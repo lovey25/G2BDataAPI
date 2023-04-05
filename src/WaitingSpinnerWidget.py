@@ -19,8 +19,8 @@ class Overlay(QWidget):
         painter.begin(self)
         painter.setRenderHint(QPainter.Antialiasing)
         painter.fillRect(event.rect(), QBrush(QColor(255, 255, 255, 180)))
-
-        self.label.move(self.width()/2 -10, self.height()/2 -5)
+        
+        self.label.move(int(self.width()/2 -10), int(self.height()/2 -5))
 
         painter.setPen(QPen(Qt.NoPen))
         for i in range(14):
@@ -28,9 +28,10 @@ class Overlay(QWidget):
                 painter.setBrush(QBrush(QColor(127 + (self.counter % 5)*32, 0, 127)))
             else:
                 painter.setBrush(QBrush(QColor(127, 127, 127)))
+
             painter.drawEllipse(
-                self.width()/2 + 50 * math.cos(2 * math.pi * i / 14.0) - 5,
-                self.height()/2 + 50 * math.sin(2 * math.pi * i / 14.0) -10,
+                int(self.width()/2 + 50 * math.cos(2 * math.pi * i / 14.0) - 5),
+                int(self.height()/2 + 50 * math.sin(2 * math.pi * i / 14.0) -10),
                 10, 10)
         painter.end()
 

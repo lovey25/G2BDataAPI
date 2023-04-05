@@ -24,11 +24,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))   # python실행 경로
 ## 고정값 설정
 DB_FILE = "G2BDB.db"            # DB 파일명 지정
 API_KEY = apikey.mykey
-API_URL = "http://apis.data.go.kr/1230000/BidPublicInfoService02"
+API_URL = "http://apis.data.go.kr/1230000/BidPublicInfoService04"
 API_URL2 = "http://apis.data.go.kr/1230000/CntrctInfoService"
-OPT_NAME_BIDC = "/getBidPblancListInfoCnstwkPPSSrch?"   #입찰공고 공사조회
+OPT_NAME_BIDC = "/getBidPblancListInfoCnstwkPPSSrch01?"   #입찰공고 공사조회
 OPT_NAME_CTRC = "/getCntrctInfoListCnstwkPPSSrch?"      #계약현황 공사조회
-OPT_NAME_BIDE = "/getBidPblancListInfoServcPPSSrch?"    #입찰공고 용역조회
+OPT_NAME_BIDE = "/getBidPblancListInfoServcPPSSrch01?"    #입찰공고 용역조회
 OPT_NAME_CTRE = "/getCntrctInfoListServcPPSSrch?"       #계약현황 용역조회
 ## 검색중인URL 저장용 전역변수
 url_pre = ""

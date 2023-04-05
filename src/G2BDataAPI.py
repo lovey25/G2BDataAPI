@@ -147,7 +147,11 @@ class CrawlRunnable(QRunnable):
             response_body = resp.read()
             html=response_body.decode('utf-8')
             soup = BeautifulSoup(html, 'lxml')
-            
+
+            errmsg = soup.find('errmsg')
+            if(errmsg!=None):
+                return 0
+
             ## BeautifulSoup에서 아이템 검색시 모두 소문자로 검색해야 함
             totalCount = soup.find('totalcount')    #검색조건에 해당하는 전체 공고수
             pageNo = soup.find('pageno')            #요청한 페이지 번호
